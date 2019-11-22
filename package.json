@@ -1,0 +1,25 @@
+{
+  "name": "tcg",
+  "version": "1.0.0",
+  "description": "Simple template code generator",
+  "preferGlobal": true,
+  "bin": {
+    "tcg": "./lib/main.js"
+  },
+  "scripts": {
+    "test": "node -c ./lib/main.js & node ./lib/main.js"
+  },
+  "keywords": [
+    "tcg",
+    "code-generator",
+    "template-code"
+  ],
+  "author": {
+    "name": "Rajat Sharma",
+    "email": "rajat.prototype@gmail.com"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^12.12.11"
+  }
+}

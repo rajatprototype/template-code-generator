@@ -1,0 +1,7 @@
+[
+    "g", "generate",
+    "p", "proto",
+    "r", "reject",
+    "h", "help",
+    "v", "version"
+]
