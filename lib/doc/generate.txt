@@ -1,0 +1,9 @@
+
+Usage: tcg g [files...] <origin>
+
+Generate template code depending on file
+extension and origin flag.
+
+Example:
+  tcg g App.jsx --react
+

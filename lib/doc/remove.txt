@@ -1,0 +1,10 @@
+
+Usage: tcg r [templates...]
+
+Remove code templates from storage
+Use filename as flag value
+(use react.js rather than .js --react)
+
+Example:
+  tcg r config.js var.css
+

@@ -1,9 +1,10 @@
 
-import * as path from 'path'
+import { extname } from 'path'
+import Subscriber from './subscriber'
 
 const supportedActions: Array<string> = require("./values/supportedActions.json")
 
-const cli = {
+export default {
 
   /**
    * CLI arguments
@@ -27,16 +28,38 @@ const cli = {
    * Filtering items started with dot character
    * @type {Getter} extensions
    * @return {Array<string>}
-   */
+   */ 
   get extensions(): Array<string> {
     return this.args
         .filter((arg: string) => /\.\w\w*$/.test(arg))
-        .map((file: string) => path.extname(file))
+        .map((file: string) => extname(file))
   }, 
 
+  /**
+   * Flag options
+   * @type {Getter} flags
+   * @return {Array<string>}
+   */
+  get flags(): Array<string> {
+    return this.args
+          .filter((arg: string) => /\-\-[\w-_]*$/.test(arg))
+          .map((opt: string) => opt.substr(2))
+  },
+
+  /**
+   * Argumented flles
+   * @type {Getter} files
+   * @return {Array<string>}
+   */
   get files(): Array<string> {
     return this.args.filter((arg: string) => /^[\w,-]+\.[A-Za-z]/.test(arg))
+  }, 
+
+  /**
+   * Invoking subscribers
+   * @return {Subscriber}
+   */
+  handle(): Object { 
+    return new Subscriber(this.action)
   }
 }
-
-export default cli

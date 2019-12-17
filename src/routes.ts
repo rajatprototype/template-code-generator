@@ -1,7 +1,19 @@
 
-import * as path from 'path';
+import { join } from 'path';
 
 const routes = {
+
+  module: {
+
+    /**
+     * Default template dir path
+     * @type {Getter} defaultDefaultTemplateDir
+     * @return {String}
+     */
+    get defaultTemplateDir(): string {
+      return join(__dirname, "defaults/codes")
+    }
+  },
 
   /**
    * User home dir
@@ -22,13 +34,13 @@ const routes = {
   },
 
   /**
-   * Command values
-   * @type {Getter} rc
+   * Prefix path
+   * @type {Getter} 
    * @return {String}
    */
-  get rc(): string {
-    return path.join(this.home, '.tcgrc');
+  get prefix(): string {
+    return join(routes.home, ".tcg")
   }
 };
 
-export default routes;
+export default routes

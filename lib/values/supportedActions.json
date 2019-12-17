@@ -1,7 +1,8 @@
 [
-    "g", "generate",
-    "p", "proto",
-    "r", "reject",
-    "h", "help",
-    "v", "version"
+  "g", "generate",
+  "u", "use",
+  "l", "list",
+  "r", "remove", 
+  "h", "help",
+  "v", "version"
 ]

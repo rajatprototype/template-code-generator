@@ -1,0 +1,8 @@
+
+Usage: tcg u [files...]
+
+Add new code templates to storage
+
+Example:
+  tcg u index.tsx config.json
+

@@ -1,0 +1,12 @@
+
+Usage: tcg <option> [files...]
+
+Options:
+    h, help                     Command help
+    v, version                  Package version
+
+    g, generate                 Generate template
+    u, use                      Create new template
+    l, list                     List of templates
+    r, remove                   Remove template
+
