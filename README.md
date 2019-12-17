@@ -9,7 +9,7 @@ TCG helps you to create and clone your existing code template.
 ## Install
 
 ```sh
- $ npm install -g tcode
+ $ npm install -g tsnippet
 ```
 
 ## Usage

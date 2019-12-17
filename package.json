@@ -1,5 +1,5 @@
 {
-  "name": "tcode",
+  "name": "tsnippet",
   "version": "1.0.0",
   "description": "Lightweight tool for create and generate template code",
   "preferGlobal": true,
@@ -8,6 +8,7 @@
   },
   "keywords": [
     "tcg",
+    "tsnippet",
     "code-generator",
     "template-code"
   ],
