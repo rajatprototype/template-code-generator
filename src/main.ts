@@ -1,7 +1,4 @@
-/**
- * Template Code Generator(TCG) public npm module
- * written in 2019
- */
+#!/usr/bin/env node
 
 import { existsSync } from 'fs'
 import cli from './cli'
