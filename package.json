@@ -1,13 +1,10 @@
 {
-  "name": "tcg",
+  "name": "tcode",
   "version": "1.0.0",
-  "description": "Simple template code generator",
+  "description": "Lightweight tool for create and generate template code",
   "preferGlobal": true,
   "bin": {
     "tcg": "./lib/main.js"
-  },
-  "scripts": {
-    "test": "node -c ./lib/main.js & node ./lib/main.js"
   },
   "keywords": [
     "tcg",
@@ -19,7 +16,7 @@
     "email": "rajat.prototype@gmail.com"
   },
   "license": "ISC",
-  "dependencies": {
-    "@types/node": "^12.12.11"
+  "devDependencies": {
+    "@types/node": "^12.12.19"
   }
 }
