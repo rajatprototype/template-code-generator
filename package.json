@@ -1,6 +1,6 @@
 {
   "name": "tsnippet",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Lightweight tool for create and generate template code",
   "preferGlobal": true,
   "bin": {
@@ -12,9 +12,19 @@
     "code-generator",
     "template-code"
   ],
+  "homepage": "https://github.com/rajatprototype/template-code-generator",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajatprototype/template-code-generator"
+  },
   "author": {
     "name": "Rajat Sharma",
-    "email": "rajat.prototype@gmail.com"
+    "email": "rajat.prototype@gmail.com",
+    "url": "https://twitter.com/Rajat04500210"
+  },
+  "bugs": {
+    "email": "rajat.prototype@gmail.com",
+    "url": "https://github.com/rajatprototype/template-code-generator/issues"
   },
   "license": "ISC",
   "devDependencies": {

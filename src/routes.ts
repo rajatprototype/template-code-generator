@@ -1,7 +1,7 @@
 
 import { join } from 'path';
 
-const routes = {
+export default {
 
   module: {
 
@@ -39,8 +39,6 @@ const routes = {
    * @return {String}
    */
   get prefix(): string {
-    return join(routes.home, ".tcg")
+    return join(this.home, ".tcg")
   }
-};
-
-export default routes
+}

@@ -1,8 +1,8 @@
 # template-code-generator
 
-[![dependencies Status](https://david-dm.org/request/request/status.svg)](https://david-dm.org/request/request)
+[![dependencies Status](https://david-dm.org/request/request/status.svg)](https://david-dm.org/request/request) [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/) 
 
-TCG helps you to create and clone your existing code template.
+It helps you to create and clone your existing code template.
 
 > All of this code templates will store inside your home directory.
 
@@ -43,3 +43,5 @@ and access it using
 ```
  $ tcg generate App.jsx --index
 ```
+
+![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)

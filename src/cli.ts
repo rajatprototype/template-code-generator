@@ -2,8 +2,6 @@
 import { extname } from 'path'
 import Subscriber from './subscriber'
 
-const supportedActions: Array<string> = require("./values/supportedActions.json")
-
 export default {
 
   /**
@@ -16,12 +14,12 @@ export default {
   }, 
 
   /**
-   * Return second argument if they Supported by app
+   * Must be second parameter
    * @type {Getter} action
    * @return {String}
    */
   get action(): string {
-    return supportedActions.find((act: string) => act === this.args[0] || null)
+    return this.args[0]
   },
 
   /**
