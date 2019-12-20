@@ -1,0 +1,8 @@
+
+Usage: tcg rename <oldname> <newname>
+
+Rename existing template
+
+Example:
+  tcg rename index.js main.js
+

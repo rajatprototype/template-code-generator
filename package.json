@@ -1,6 +1,6 @@
 {
   "name": "tsnippet",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Lightweight tool for create and generate template code",
   "preferGlobal": true,
   "bin": {

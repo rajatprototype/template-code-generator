@@ -32,6 +32,9 @@ export default class Subscriber {
       case 'remove':
         actions.remove()
         break
+      case 'rename':
+        actions.rename()
+        break
       case 'h':
       case 'help':
         actions.doc.commands()

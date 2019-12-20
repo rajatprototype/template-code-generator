@@ -10,3 +10,5 @@ Options:
     l, list                     List of templates
     r, remove                   Remove template
 
+       rename                   Change alias of template
+

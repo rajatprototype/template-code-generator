@@ -1,8 +1,9 @@
 
-import { readFileSync, statSync, writeFileSync, unlinkSync } from 'fs'
-import { join, parse } from 'path'
+import { readFileSync, statSync, writeFileSync, unlinkSync, existsSync, renameSync } from 'fs'
+import { join, parse, basename } from 'path'
 import utils from './utils'
 import cli from './cli'
+import routes from './routes'
 
 const { version } = require("../package.json")
 
@@ -47,6 +48,9 @@ export default {
     },
     remove(): void {
       this.print('remove')
+    }, 
+    rename(): void {
+      this.print('rename')
     }
   },
 
@@ -133,17 +137,38 @@ export default {
         const storagetemp: string = utils.list
               .find((temp: string) => parse(temp).base === file)
 
-        if (storagetemp) {
+        try {
+          if (!storagetemp) {
+            throw (`Template <${utils.errorText(file)}> not available inside storage\n`)
+          }
           // Delete template file
           unlinkSync(storagetemp)
-        } else {
-          // Err
-          process.stdout.write(`Template <${utils.errorText(file)}> not available inside storage\n`)
+        } catch(err) {
+          process.stdout.write(err)
         }
       }
     } else {
       // Command help
       this.doc.remove()
+    }
+  }, 
+  
+  rename(): void {
+    const [ oldname, newname ] = cli.files
+        .slice(0, 2)
+        .map((file: string) => join(routes.prefix, file))
+
+    if (oldname && newname) {
+      try {
+        if (!existsSync(oldname)) {
+          throw(`Cannot find <${utils.errorText(basename(oldname))}> in storage\n`)
+        }
+        renameSync(oldname, newname)
+      } catch (error) {
+        process.stdout.write(error)
+      }
+    } else {
+      this.doc.rename()
     }
   }
 }
