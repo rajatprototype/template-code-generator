@@ -30,7 +30,7 @@ It will produce the following result
 
 To generate a code snippet
 ```
- $ tcg generate index.html
+ $ tcg index.html
 ```
 It will generate simple HTML code snippet in your current directory
 
@@ -41,7 +41,7 @@ To set a default template, use "_" character as a filename
 ```
 and access it using
 ```
- $ tcg generate App.jsx --index
+ $ tcg App.jsx --index
 ```
 
 ![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)

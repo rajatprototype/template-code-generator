@@ -1,0 +1,9 @@
+
+
+Usage: tcg view [files...]
+
+Print the content of template files
+
+Example:
+  tcg view Main.vue
+

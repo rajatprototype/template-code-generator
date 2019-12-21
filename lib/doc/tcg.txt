@@ -11,4 +11,5 @@ Options:
     r, remove                   Remove template
 
        rename                   Change alias of template
+       view                     Content of template
 

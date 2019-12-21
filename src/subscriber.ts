@@ -35,6 +35,9 @@ export default class Subscriber {
       case 'rename':
         actions.rename()
         break
+      case 'view':
+        actions.view()
+        break
       case 'h':
       case 'help':
         actions.doc.commands()
@@ -44,6 +47,12 @@ export default class Subscriber {
         actions.doc.version()
         break
       default:
+        // For quick access
+        if (this.action) {
+          this.action = 'generate'
+          this.invoke()
+          return
+        }
         actions.doc.commands()
     }
   }

@@ -51,6 +51,9 @@ export default {
     }, 
     rename(): void {
       this.print('rename')
+    }, 
+    view(): void {
+      this.print('view')
     }
   },
 
@@ -169,6 +172,25 @@ export default {
       }
     } else {
       this.doc.rename()
+    }
+  }, 
+
+  /**
+   * Write the content of files on term console
+   * @return {void}
+   */
+  view(): void {
+    const { files } = cli
+
+    if (files.length) {
+      files.forEach((file: string) => {
+        const abspath: string = join(routes.prefix, file)
+        if (existsSync(abspath)) {
+          process.stdout.write(readFileSync(abspath, "UTF-8"))
+        }
+      })
+    } else {
+      this.doc.view()
     }
   }
 }
